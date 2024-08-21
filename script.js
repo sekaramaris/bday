@@ -62,19 +62,6 @@ function stopConfetti() {
   }
 }
 
-// Music functions
-const backgroundMusic = document.getElementById('backgroundMusic');
-
-function playMusic() {
-  if (backgroundMusic.paused) {
-    backgroundMusic.play();
-  }
-}
-
-function stopMusicAndGoBack() {
-  if (!backgroundMusic.paused) {
-    backgroundMusic.pause();
-    backgroundMusic.currentTime = 0;
-  }
+function goBackToIndex() {
   window.location.href = 'index.html';
 }
