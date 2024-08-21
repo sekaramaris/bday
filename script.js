@@ -1,4 +1,3 @@
-// Slideshow functions
 let slideIndex = 1;
 showSlides(slideIndex);
 
@@ -61,4 +60,21 @@ function stopConfetti() {
   while (confettiContainer.firstChild) {
     confettiContainer.removeChild(confettiContainer.firstChild);
   }
+}
+
+// Music functions
+const backgroundMusic = document.getElementById('backgroundMusic');
+
+function playMusic() {
+  if (backgroundMusic.paused) {
+    backgroundMusic.play();
+  }
+}
+
+function stopMusicAndGoBack() {
+  if (!backgroundMusic.paused) {
+    backgroundMusic.pause();
+    backgroundMusic.currentTime = 0;
+  }
+  window.location.href = 'index.html';
 }

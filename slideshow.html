@@ -3,18 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>pibeday</title>
+    <title>Your Surprise!</title>
     <link rel="stylesheet" href="styles.css">
     <script src="script.js" defer></script>
 </head>
 <body>
-    <!-- Add audio player with autoplay -->
-    <audio autoplay loop>
-		<source src="siapa_tu.mp3" type="audio/mpeg">
-		<source src="siapa_tu.ogg" type="audio/ogg">
-        Your browser does not support the audio element.
-    </audio>
-    
     <div class="container">
         <div class="slideshow-container">
             <!-- Slide 1 -->
@@ -30,6 +23,8 @@
                         <p>no one makes me value my friendship more than you, and you are still my greatest gift, bihah.</p>
                     </div>
                 </div>
+                <!-- Button to start the music -->
+                <button onclick="playMusic()" class="front-button">Play Music</button>
             </div>
 
             <!-- Slide 2 -->
@@ -72,7 +67,8 @@
                         <p class="animated-text">selamat hari jadi !!</p>
                         <p class="animated-text">moga kamu sentiasa dijaga di bawah lindungan tuhan</p>
                     </div>
-                    <button onclick="window.location.href='index.html'" class="back-button">meow</button>
+                    <!-- Button to stop the music and go back -->
+                    <button onclick="stopMusicAndGoBack()" class="back-button">Stop Music & Go Back</button>
                 </div>
             </div>
 
@@ -90,5 +86,11 @@
             <span class="dot" onclick="currentSlide(4)"></span> 
         </div>
     </div>
+
+    <!-- Add audio player -->
+    <audio id="backgroundMusic" loop>
+        <source src="siapa_tu.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
 </body>
 </html>
