@@ -1,0 +1,280 @@
+/* General Styles */
+body {
+    font-family: 'Copperplate', 'Copperplate Gothic Light', sans-serif;
+    background: linear-gradient(135deg, #fdfcfb 0%, #e2d1c3 100%);
+    color: #333;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    overflow: hidden;
+}
+
+.container {
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 30px 20px;
+    border-radius: 20px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    max-width: 90%;
+    margin: auto;
+    backdrop-filter: blur(10px);
+}
+
+/* Slideshow container */
+.slideshow-container {
+    position: relative;
+    margin: auto;
+    max-width: 800px;
+    background-color: #ffecef;
+    border-radius: 20px;
+    padding: 20px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+/* Text container to align image and text side by side */
+.text-container {
+    display: flex;
+    align-items: center;
+}
+
+/* Slide images */
+.slide-image {
+    width: 200px;
+    height: 200px;
+    border-radius: 20px;
+    margin-right: 20px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Slide text styling */
+.text {
+    color: #333;
+    font-size: 14px;
+    text-align: left;
+    line-height: 1.8;
+}
+
+/* Centered birthday text styling */
+.birthday-text {
+    text-align: center;
+    font-size: 14px;
+    color: #ff6f61;
+    line-height: 1.4;
+    padding: 0 10px;  /* Added padding for better spacing */
+}
+
+/* Animated text for the 4th slide */
+.animated-text {
+    font-size: 14px;
+    color: #ff6f61;
+    animation: slideIn 2s ease-in-out forwards, fadeIn 2s ease-in-out;
+}
+
+/* Keyframes for slide-in animation */
+@keyframes slideIn {
+    from {
+        transform: translateY(30px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+    color: #777;
+    font-size: 12px;
+    padding: 8px 12px;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+}
+
+/* Next & previous buttons as floating arrows */
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: auto;
+    margin-top: 0;
+    padding: 8px;
+    color: #ff8c94;
+    background-color: rgba(255, 182, 193, 0.7);
+    font-weight: bold;
+    font-size: 18px;
+    transition: color 0.3s ease, background-color 0.3s ease;
+    user-select: none;
+    border-radius: 50%;
+    border: none;
+    z-index: 10;
+}
+
+.next {
+    right: -20px;
+}
+
+.prev {
+    left: -20px;
+}
+
+/* Hover effect for arrows */
+.prev:hover, .next:hover {
+    background-color: #ffb6c1;
+    color: #333;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+    cursor: pointer;
+    height: 12px;
+    width: 12px;
+    margin: 0 5px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.3s ease;
+}
+
+.active, .dot:hover {
+    background-color: #ff8c94;
+}
+
+/* Fading animation for slides */
+.fade {
+    -webkit-animation-name: fade;
+    -webkit-animation-duration: 1.5s;
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+    from {opacity: .4} 
+    to {opacity: 1}
+}
+
+@keyframes fade {
+    from {opacity: .4} 
+    to {opacity: 1}
+}
+
+/* Confetti styles for the 4th slide */
+.confetti-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 10;
+}
+
+.confetti {
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    background-color: #ff6f61; /* Default color */
+    opacity: 0.8;
+    animation: confetti-fall linear infinite;
+}
+
+/* Adding multiple colors for confetti */
+.confetti:nth-child(1) { background-color: #ff6f61; } /* Pastel Red */
+.confetti:nth-child(2) { background-color: #ffb6c1; } /* Pastel Pink */
+.confetti:nth-child(3) { background-color: #ffd1dc; } /* Pastel Light Pink */
+.confetti:nth-child(4) { background-color: #f7d794; } /* Pastel Yellow */
+.confetti:nth-child(5) { background-color: #e4f9f5; } /* Pastel Mint */
+.confetti:nth-child(6) { background-color: #a8e6cf; } /* Pastel Green */
+.confetti:nth-child(7) { background-color: #dcedc1; } /* Pastel Light Green */
+.confetti:nth-child(8) { background-color: #ffb6b9; } /* Pastel Coral */
+.confetti:nth-child(9) { background-color: #ffcccb; } /* Pastel Peach */
+.confetti:nth-child(10) { background-color: #ffebcd; } /* Pastel Beige */
+
+@keyframes confetti-fall {
+    from {
+        transform: translateY(-100vh);
+    }
+    to {
+        transform: translateY(100vh);
+    }
+}
+
+/* Birthday image in the 4th slide */
+.birthday-image {
+    width: 200px;  /* Adjusted width */
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Back to Front Page button */
+.back-button, .front-button {
+    margin-top: 20px;
+    padding: 8px 16px;  /* Smaller padding for a smaller button */
+    font-size: 14px;  /* Smaller font size */
+    color: #fff;
+    background-color: #ff8c94;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    display: inline-block;  /* Ensure it doesn’t stretch out */
+    text-align: center;  /* Center the text */
+}
+
+.back-button:hover, .front-button:hover {
+    background-color: #ff6f61;
+    transform: scale(1.05);
+}
+
+.back-button:active, .front-button:active {
+    transform: scale(0.95);
+}
+
+/* General Slide container adjustments */
+.slide {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column; /* Ensures content is centered vertically */
+    text-align: center;
+    padding: 20px;
+}
+
+/* Media query to adjust the layout on small screens */
+@media screen and (max-width: 600px) {
+    .slideshow-container {
+        max-width: 100%; /* Make sure it stays within the screen size */
+    }
+    
+    .slide-image {
+        width: 80%; /* Adjust image size for mobile */
+        height: auto;
+        margin-right: 0;
+        margin-bottom: 20px;
+    }
+
+    .text-container {
+        flex-direction: column;
+    }
+
+    .text, .birthday-text, .animated-text {
+        font-size: 14px; /* Adjust text size for mobile */
+    }
+}
