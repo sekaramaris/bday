@@ -64,7 +64,7 @@ body {
     font-size: 14px;
     color: #ff6f61;
     line-height: 1.4;
-    padding: 0 10px;  /* Added padding for better spacing */
+    padding: 0 10px;
 }
 
 /* Animated text for the 4th slide */
@@ -252,15 +252,17 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-direction: column; /* Ensures content is centered vertically */
+    flex-direction: column;
     text-align: center;
     padding: 20px;
+    overflow-y: auto;  /* Allow vertical scrolling */
+    max-height: 100vh; /* Limit the maximum height to the view height */
 }
 
 /* Media query to adjust the layout on small screens */
 @media screen and (max-width: 600px) {
     .slideshow-container {
-        max-width: 100%; /* Make sure it stays within the screen size */
+        max-width: 100%; /* Ensure it fits the screen size */
     }
     
     .slide-image {
@@ -276,5 +278,9 @@ body {
 
     .text, .birthday-text, .animated-text {
         font-size: 14px; /* Adjust text size for mobile */
+    }
+
+    .slide {
+        padding: 10px; /* Less padding on mobile */
     }
 }
