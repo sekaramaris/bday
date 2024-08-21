@@ -62,6 +62,7 @@ function stopConfetti() {
   }
 }
 
+// Function to go back to index.html
 function goBackToIndex() {
-  window.location.href = 'index.html';
+  window.location.href = 'index.html';  // Ensure that 'index.html' is correctly named and located in the same directory as 'slideshow.html'
 }
