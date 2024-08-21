@@ -202,88 +202,88 @@ body {
 .confetti:nth-child(3) { background-color: #ffd1dc; } /* Pastel Light Pink */
 .confetti:nth-child(4) { background-color: #f7d794; } /* Pastel Yellow */
 .confetti:nth-child(5) { background-color: #e4f9f5; } /* Pastel Mint */
-.confetti:nth-child(6) { background-color: #a8e6cf; } /* Pastel Green */
-.confetti:nth-child(7) { background-color: #dcedc1; } /* Pastel Light Green */
-.confetti:nth-child(8) { background-color: #ffb6b9; } /* Pastel Coral */
-.confetti:nth-child(9) { background-color: #ffcccb; } /* Pastel Peach */
-.confetti:nth-child(10) { background-color: #ffebcd; } /* Pastel Beige */
+	confetti:nth-child(6) { background-color: #a8e6cf; } /* Pastel Green */
+	confetti:nth-child(7) { background-color: #dcedc1; } /* Pastel Light Green */
+	confetti:nth-child(8) { background-color: #ffb6b9; } /* Pastel Coral */
+	confetti:nth-child(9) { background-color: #ffcccb; } /* Pastel Peach */
+	confetti:nth-child(10) { background-color: #ffebcd; } /* Pastel Beige */
 
-@keyframes confetti-fall {
-    from {
-        transform: translateY(-100vh);
-    }
-    to {
-        transform: translateY(100vh);
-    }
-}
-
-/* Birthday image in the 4th slide */
-.birthday-image {
-    width: 200px;  /* Adjusted width */
-    height: auto;
-    border-radius: 10px;
-    margin-bottom: 20px;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-}
-
-/* Back to Front Page button */
-.back-button, .front-button {
-    margin-top: 20px;
-    padding: 8px 16px;  /* Smaller padding for a smaller button */
-    font-size: 14px;  /* Smaller font size */
-    color: #fff;
-    background-color: #ff8c94;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s ease, transform 0.3s ease;
-    display: inline-block;  /* Ensure it doesn’t stretch out */
-    text-align: center;  /* Center the text */
-}
-
-.back-button:hover, .front-button:hover {
-    background-color: #ff6f61;
-    transform: scale(1.05);
-}
-
-.back-button:active, .front-button:active {
-    transform: scale(0.95);
-}
-
-/* General Slide container adjustments */
-.slide {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    text-align: center;
-    padding: 20px;
-    overflow-y: auto;  /* Allow vertical scrolling */
-    max-height: 100vh; /* Limit the maximum height to the view height */
-}
-
-/* Media query to adjust the layout on small screens */
-@media screen and (max-width: 600px) {
-    .slideshow-container {
-        max-width: 100%; /* Ensure it fits the screen size */
-    }
-    
-    .slide-image {
-        width: 80%; /* Adjust image size for mobile */
-        height: auto;
-        margin-right: 0;
-        margin-bottom: 20px;
-    }
-
-    .text-container {
-        flex-direction: column;
-    }
-
-    .text, .birthday-text, .animated-text {
-        font-size: 14px; /* Adjust text size for mobile */
-    }
-
-    .slide {
-        padding: 10px; /* Less padding on mobile */
-    }
-}
+	@keyframes confetti-fall {
+	    from {
+	        transform: translateY(-100vh);
+	    }
+	    to {
+	        transform: translateY(100vh);
+	    }
+	}
+	
+	/* Birthday image in the 4th slide */
+	.birthday-image {
+	    width: 200px;  /* Adjusted width */
+	    height: auto;
+	    border-radius: 10px;
+	    margin-bottom: 20px;
+	    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+	}
+	
+	/* Back to Front Page button */
+	.back-button, .front-button {
+	    margin-top: 20px;
+	    padding: 8px 16px;  /* Smaller padding for a smaller button */
+	    font-size: 14px;  /* Smaller font size */
+	    color: #fff;
+	    background-color: #ff8c94;
+	    border: none;
+	    border-radius: 5px;
+	    cursor: pointer;
+	    transition: background-color 0.3s ease, transform 0.3s ease;
+	    display: inline-block;  /* Ensure it doesn’t stretch out */
+	    text-align: center;  /* Center the text */
+	}
+	
+	.back-button:hover, .front-button:hover {
+	    background-color: #ff6f61;
+	    transform: scale(1.05);
+	}
+	
+	.back-button:active, .front-button:active {
+	    transform: scale(0.95);
+	}
+	
+	/* General Slide container adjustments */
+	.slide {
+	    display: flex;
+	    justify-content: center;
+	    align-items: center;
+	    flex-direction: column;
+	    text-align: center;
+	    padding: 20px;
+	    overflow-y: auto;  /* Allow vertical scrolling */
+	    max-height: 100vh; /* Limit the maximum height to the view height */
+	}
+	
+	/* Media query to adjust the layout on small screens */
+	@media screen and (max-width: 600px) {
+	    .slideshow-container {
+	        max-width: 100%; /* Ensure it fits the screen size */
+	    }
+	    
+	    .slide-image {
+	        width: 80%; /* Adjust image size for mobile */
+	        height: auto;
+	        margin-right: 0;
+	        margin-bottom: 20px;
+	    }
+	
+	    .text-container {
+	        flex-direction: column;
+	    }
+	
+	    .text, .birthday-text, .animated-text {
+	        font-size: 14px; /* Adjust text size for mobile */
+	    }
+	
+	    .slide {
+	        padding: 10px; /* Less padding on mobile */
+	    }
+	}
