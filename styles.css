@@ -9,7 +9,8 @@ body {
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    overflow: hidden;
+    overflow: auto; /* Ensure the body is scrollable */
+    -webkit-overflow-scrolling: touch; /* Smooth scrolling on iOS */
 }
 
 .container {
@@ -21,6 +22,8 @@ body {
     max-width: 90%;
     margin: auto;
     backdrop-filter: blur(10px);
+    overflow-y: auto; /* Allow scrolling within the container if content overflows */
+    max-height: 100vh; /* Prevent content from exceeding the viewport height */
 }
 
 /* Slideshow container */
